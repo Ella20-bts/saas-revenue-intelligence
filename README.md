@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SaaS Revenue Intelligence Platform
 
 **Enterprise-style SaaS Revenue Analytics System**  
