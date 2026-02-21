@@ -96,17 +96,24 @@ saas-revenue-intelligence/
 ```bash
 git clone https://github.com/Ella20-bts/saas-revenue-intelligence.git
 cd saas-revenue-intelligence
-2. Build containers
+**
+### 2. Build containers
+```bash
 docker-compose build
-3. Start services
+### 3. Start services
+```bash
 docker-compose up -d
-4. Load ETL data
+### 4. Load ETL data
+```bash
 docker-compose run etl
-5. Open Dashboard
+
+### 5. Open Dashboard
 
 Visit:
 
 http://localhost:8502
+
+---
 📌 Why This Matters
 
 This repository demonstrates full end-to-end data engineering workflows that enterprise teams care about:
@@ -118,12 +125,14 @@ This repository demonstrates full end-to-end data engineering workflows that ent
 ✔ Containerized stack
 ✔ Clean analytics architecture
 
+---
 📎 Recommended Viewing
 
 ⭐ Start with: /dashboard.py
 📊 Second: src/analytics/metrics.py
 🔁 Third: src/etl/load.py
 
+---
 🧠 Next Upgrade Opportunities
 
 This project could be extended to:
@@ -138,7 +147,10 @@ CI/CD pipeline with GitHub Actions
 
 Data quality and monitoring layer
 
+---
+
 👩‍💻 Author
 
 Louella Respuesto
 Data Engineering | SaaS Analytics | Remote-Ready
+
