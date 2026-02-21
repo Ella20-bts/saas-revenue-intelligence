@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SaaS Revenue Intelligence Platform
 
 **Enterprise-style SaaS Revenue Analytics System**  
@@ -142,3 +143,4 @@ Data quality and monitoring layer
 
 Louella Respuesto
 Data Engineering | SaaS Analytics | Remote-Ready
+======
