@@ -1,3 +1,4 @@
+
 # SaaS Revenue Intelligence Platform
 
 **Enterprise-style SaaS Revenue Analytics System**  
@@ -91,27 +92,16 @@ saas-revenue-intelligence/
 
 ## 🚀 Quick Start
 
-### 1. Clone the repository
+- 1. Clone the repository
 
 ```bash
 git clone https://github.com/Ella20-bts/saas-revenue-intelligence.git
 cd saas-revenue-intelligence
-**
-### 2. Build containers
-```bash
+
+- 2. Build containers
 docker-compose build
-### 3. Start services
-```bash
-docker-compose up -d
-### 4. Load ETL data
-```bash
-docker-compose run etl
 
-### 5. Open Dashboard
 
-Visit:
-
-http://localhost:8502
 
 ---
 📌 Why This Matters
@@ -153,4 +143,5 @@ Data quality and monitoring layer
 
 Louella Respuesto
 Data Engineering | SaaS Analytics | Remote-Ready
+
 
