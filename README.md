@@ -1,74 +1,113 @@
-<<<<<<< HEAD
-# SaaS Revenue Intelligence Platform
+# 📊 SaaS Revenue Intelligence Platform
 
-**Enterprise-style SaaS Revenue Analytics System**  
-Built with Python, PostgreSQL, Docker, and Streamlit to model revenue, retention, and customer lifetime value for subscription-based businesses.
+Enterprise-grade SaaS revenue analytics system built with Python, PostgreSQL, Docker, and Streamlit.
+
+This project simulates a real-world subscription-based SaaS company and delivers executive-level revenue intelligence including retention analytics, cohort analysis, CAC modeling, and lifetime value computation.
 
 ---
 
-## 🧠 Overview
+## 🚀 Overview
 
-This project simulates a real SaaS analytics backend, with clean architecture and modular design:
+This platform models the analytics layer of a modern SaaS company by implementing:
 
-- Containerized ETL pipeline for synthetic SaaS data
+- End-to-end ETL pipeline
+- Synthetic subscription + payment data generation
 - PostgreSQL data warehouse
-- Business metric analytics layer
-- Interactive executive dashboard
-- Advanced retention and survival modeling
-
-It demonstrates techniques and practices used in **enterprise data engineering workflows**.
+- Modular analytics computation engine
+- Executive KPI dashboard
+- Retention heatmap and survival analysis
+- Fully containerized architecture
 
 ---
 
-## 🛠 Core Features
+## 🏗 System Architecture
 
-### 📊 Revenue & KPI Analytics
-- Monthly Recurring Revenue (MRR)
-- Annual Recurring Revenue (ARR)
+
+Data Generator
+↓
+ETL Pipeline (Python)
+↓
+PostgreSQL Database
+↓
+Analytics Layer (Metrics Engine)
+↓
+Streamlit Executive Dashboard
+
+
+All components are Dockerized and designed with modular separation of concerns.
+
+---
+
+## 📈 SaaS Metrics Implemented
+
+### Revenue Metrics
+- MRR (Monthly Recurring Revenue)
+- ARR (Annual Recurring Revenue)
 - Total Revenue
-- Average Revenue Per User (ARPU)
-- Customer Lifetime Value (LTV)
+- ARPU (Average Revenue Per User)
+- LTV (Customer Lifetime Value)
+
+### Efficiency Metrics
+- Churn Rate
+- Simulated CAC (Customer Acquisition Cost)
 - LTV / CAC Ratio
 
----
-
-### 📈 Cohort & Retention Modeling
-- Cohort retention bar chart
-- Retention heatmap
-- Customer survival curve
-
----
-
-### 📦 CAC & Plan Analytics
-- Customer Acquisition Cost (simulated)
-- Plan-level lifetime value
-- Revenue by plan type
-- Subscription status breakdown
-- Revenue by country
+### Retention Analytics
+- Cohort Retention Analysis
+- Retention Heatmap
+- Survival Curve
+- LTV by Plan
+- Revenue by Country
 
 ---
 
-## 📁 Architecture
+## 🧠 Executive KPI Scorecard
+
+The dashboard includes an executive SaaS panel displaying:
+
+- ARR
+- LTV
+- Simulated CAC
+- LTV / CAC Ratio
+
+Designed to mirror investor-level reporting standards.
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|--------|------------|
+| Language | Python 3.11 |
+| Database | PostgreSQL 15 |
+| Analytics | Pandas, NumPy |
+| Visualization | Plotly, Streamlit |
+| Containerization | Docker, Docker Compose |
+| Architecture | Modular Service-Oriented Design |
+
+---
+
+## 📂 Project Structure
 
 
 saas-revenue-intelligence/
 │
-├── init/ # Database init scripts
+├── init/
 │ └── init.sql
 │
 ├── src/
-│ ├── analytics/ # Business metrics logic
+│ ├── analytics/
 │ │ └── metrics.py
 │ │
-│ ├── etl/ # ETL data pipeline
+│ ├── etl/
 │ │ └── load.py
 │ │
-│ ├── services/ # Database connection layer
+│ ├── services/
 │ │ └── db.py
 │ │
-│ └── data_generator.py # Synthetic SaaS data generator
+│ └── data_generator.py
 │
-├── dashboard.py # Streamlit BI layer
+├── dashboard.py
 ├── docker-compose.yml
 ├── Dockerfile
 ├── requirements.txt
@@ -77,70 +116,68 @@ saas-revenue-intelligence/
 
 ---
 
-## 💻 Tech Stack
+## ▶️ Running the Project
 
-| Area | Technology |
-|------|------------|
-| Language | Python |
-| Database | PostgreSQL |
-| Containerization | Docker & Docker Compose |
-| Visualization | Plotly & Streamlit |
-| Data Modeling | Cohort retention, survival rate |
-| Analytics | ARPU, MRR, LTV, CAC |
+### 1️⃣ Clone Repository
+
+
+git clone https://github.com/Ella20-bts/saas-revenue-intelligence.git
+
+cd saas-revenue-intelligence
+
+
+### 2️⃣ Build Containers
+
+
+docker-compose build
+
+
+### 3️⃣ Run the System
+
+
+docker-compose up
+
+
+### 4️⃣ Open Dashboard
+
+
+http://localhost:8502
+
 
 ---
 
-## 🚀 Quick Start
+## 📊 What This Project Demonstrates
 
-### 1. Clone the repository
+✔ Revenue modeling for subscription businesses  
+✔ Cohort retention analytics implementation  
+✔ SaaS KPI engineering  
+✔ Modular Python architecture  
+✔ PostgreSQL integration  
+✔ Dockerized data infrastructure  
+✔ Executive-level dashboard design  
 
-```bash
-git clone https://github.com/Ella20-bts/saas-revenue-intelligence.git
-cd saas-revenue-intelligence
-2. Build containers
-docker-compose build
-3. Start services
-docker-compose up -d
-4. Load ETL data
-docker-compose run etl
-5. Open Dashboard
+---
 
-Visit:
+## 🔮 Future Enhancements
 
-http://localhost:8502
-📌 Why This Matters
+- FastAPI backend for metrics API layer
+- Automated ETL scheduler
+- Cloud deployment (AWS/GCP)
+- CI/CD pipeline
+- Predictive churn modeling
+- Data warehouse optimization
 
-This repository demonstrates full end-to-end data engineering workflows that enterprise teams care about:
+---
 
-✔ Modular code
-✔ Separation of concerns
-✔ Production-like ETL pattern
-✔ Metrics layer reusable in backend APIs
-✔ Containerized stack
-✔ Clean analytics architecture
+## 👩‍💻 Author
 
-📎 Recommended Viewing
+Louella Respuesto  
+Aspiring Data & Analytics Engineer  
 
-⭐ Start with: /dashboard.py
-📊 Second: src/analytics/metrics.py
-🔁 Third: src/etl/load.py
+Focused on building production-style data systems and revenue intelligence platforms.
 
-🧠 Next Upgrade Opportunities
+---
 
-This project could be extended to:
+## ⭐ If You Found This Useful
 
-Incremental ETL with CDC logic
-
-Deployment to AWS ECS/RDS
-
-API backend with FastAPI / Flask
-
-CI/CD pipeline with GitHub Actions
-
-Data quality and monitoring layer
-
-👩‍💻 Author
-
-Louella Respuesto
-Data Engineering | SaaS Analytics | Remote-Ready
-======
+Star the repository and connect on GitHub.
